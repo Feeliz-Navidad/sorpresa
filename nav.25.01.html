@@ -325,10 +325,10 @@ body {
 
 
 
-		
 @media (max-width: 768px) {
     .wishMessage {
-        font-size: 28px !important;
+        font-size: 22px !important;  /* MÁS PEQUEÑO (era 28px) */
+        line-height: 1.3 !important; /* MENOS ESPACIO ENTRE LÍNEAS */
     }
     
     #username {
@@ -338,8 +338,11 @@ body {
     #usernameb {
         font-size: 22px !important;
     }
+    
+    .mainContainer {
+        padding: 15px 25px 80px 25px !important; /* MENOS PADDING LATERAL */
+    }
 }
-		
 		
 		
 
@@ -607,3 +610,4 @@ var x = setInterval(function() {
 </body>
 
 </html>
+
