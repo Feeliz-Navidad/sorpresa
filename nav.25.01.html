@@ -35,9 +35,12 @@
     position: absolute;
     top: -10px;
     color: white;
-    font-size: 20px;
-    opacity: 0.8;
+    font-size: 25px;  /* ← MÁS GRANDE */
+    opacity: 0.9;     /* ← MÁS VISIBLE */
+    text-shadow: 0 0 8px rgba(255,255,255,0.8), 
+                 0 0 15px rgba(200,230,255,0.6);  /* ← BRILLO */
     animation: fall linear infinite;
+    filter: drop-shadow(0 0 3px #fff);  /* ← RESPLANDOR */
 }
 
 @keyframes fall {
@@ -528,7 +531,7 @@ function createSnowflake() {
     
     const snowflake = document.createElement('div');
     snowflake.classList.add('snowflake');
-    snowflake.innerHTML = '❄';
+    snowflake.innerHTML = '❅';  // ← Más detallado
     snowflake.style.left = Math.random() * 100 + '%';
     snowflake.style.animationDuration = (Math.random() * 3 + 2) + 's';
     snowflake.style.opacity = Math.random() * 0.6 + 0.4;
@@ -561,7 +564,7 @@ function createSnowflakeTarjeta() {
     }, 5000);
 }
 
-const snowInterval = setInterval(createSnowflake, 200);
+const snowInterval = setInterval(createSnowflake, 140);
 let snowIntervalTarjeta;
 
 // Función para abrir tarjeta
@@ -611,6 +614,7 @@ var x = setInterval(function() {
 </body>
 
 </html>
+
 
 
 
